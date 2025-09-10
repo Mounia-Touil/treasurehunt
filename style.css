@@ -1,0 +1,285 @@
+/* General Layout */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 20px;
+    background-color: #f0f8ff;
+    color: #000;
+}
+
+header {
+    background-color: #4b2e14;
+    color: white;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.banner {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+    margin-right: 15px;
+}
+
+#cart-icon {
+    font-size: 18px;
+}
+
+#cart-icon a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.nav-button {
+    padding: 8px 15px;
+    margin: 5px;
+    background-color: #7a4f2a;
+    color: white;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.nav-button:hover {
+    background-color: #5a3a1d;
+    transform: scale(1.05);
+}
+
+.nav-button.active {
+    background-color: #b87333;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    float: left;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border: 2px solid #b87333;
+    border-radius: 5px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar li {
+    margin: 8px 0;
+}
+
+.sidebar a {
+    color: #4b2e14;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+#search-container {
+    margin: 20px 0;
+}
+
+#search-bar {
+    padding: 8px;
+    width: 60%;
+    border: 1px solid #b87333;
+    border-radius: 4px;
+}
+
+#search-btn {
+    padding: 8px 12px;
+    background-color: #7a4f2a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#search-btn:hover {
+    background-color: #5a3a1d;
+}
+
+section {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: white;
+    border: 2px solid #b87333;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Grid Layout for Items */
+.main-content section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.item {
+    background-color: #fff;
+    border: 2px solid #b87333;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.item-img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.item button {
+    margin: 5px 5px;
+    padding: 6px 12px;
+    background-color: #7a4f2a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.item button:hover {
+    background-color: #5a3a1d;
+}
+
+#latest-items .item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#latest-items .item:last-child {
+    border-bottom: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+    clear: both;
+}
+
+footer a {
+    color: #4b2e14;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Scroll to Top Button */
+#scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #7a4f2a;
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+#scroll-top:hover {
+    background-color: #5a3a1d;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode header {
+    background-color: #333;
+}
+
+.dark-mode .sidebar {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode .sidebar a {
+    color: #fff;
+}
+
+.dark-mode .main-content {
+    background-color: #2d2d2d;
+}
+
+.dark-mode section {
+    background-color: #3a3a3a;
+    border-color: #555;
+}
+
+.dark-mode footer {
+    color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    #search-bar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TreasureHunt - View Items</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <img src="treasure-hunter.png" alt="Treasure Hunt Banner" class="banner">
+    <div class="header-content">
+        <div class="header-left">
+            <img src="Logo.png" alt="Treasure Hunt Logo" class="logo">
+            <h1>TreasureHunt Auction System</h1>
+        </div>
+        <div id="cart-icon">
+            <a href="Cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="TresureHunt.html" class="nav-button">Home</a></li>
+            <li><a href="Register.html" class="nav-button">Register</a></li>
+            <li><a href="login.html" class="nav-button">Login</a></li>
+            <li><a href="ViewItem.html" class="nav-button active">View Items</a></li>
+            <li><a href="Sell.html" class="nav-button">Sell Item</a></li>
+            <li><a href="Admin.html" class="nav-button">Admin Login</a></li>
+            <li><a href="Help.html" class="nav-button">Help</a></li>
+            <li><a href="Contact.html" class="nav-button">Contact</a></li>
+            <li><a href="#" onclick="checkLogin('Sell.html')">Sell Item</a></li>
+<li><a href="#" onclick="checkLogin('Cart.html')">Cart</a></li>
+
+        </ul>
+    </nav>
+</header>
+
+<button id="scroll-top">⬆️</button>
+<button id="dark-toggle">🌙</button>
+
+<div class="sidebar">
+    <h3>Categories</h3>
+    <ul>
+        <li><a href="javascript:void(0)" onclick="filterCategory('electronics')">Electronics</a></li>
+        <li><a href="javascript:void(0)" onclick="filterCategory('fashion')">Fashion</a></li>
+        <li><a href="javascript:void(0)" onclick="filterCategory('automobiles')">Automobiles</a></li>
+        <li><a href="javascript:void(0)" onclick="filterCategory('home')">Home & Kitchen</a></li>
+        <li><a href="javascript:void(0)" onclick="filterCategory('books')">Books</a></li>
+        <li><a href="javascript:void(0)" onclick="filterCategory('sports')">Sports & Outdoors</a></li>
+        <li><a href="javascript:void(0)" onclick="filterCategory('health')">Health & Beauty</a></li>
+        <li><a href="javascript:void(0)" onclick="filterCategory('toys')">Toys & Games</a></li>
+        <li><a href="javascript:void(0)" onclick="filterCategory('music')">Music & Instruments</a></li>
+        <li><a href="javascript:void(0)" onclick="filterCategory('collectibles')">Collectibles & Art</a></li>
+        <li><a href="javascript:void(0)" onclick="filterCategory('all')">Show All</a></li>
+    </ul>
+    
+    </div>
+
+<div class="main-content">
+       <!-- Electronics Section -->
+<section id="electronics">
+    <h2>Electronics</h2>
+    <div class="item">
+        <img src="images/iphone14pro.jpg" alt="iPhone 14 Pro" class="item-img">
+        <h3>iPhone 14 Pro</h3>
+        <p>256GB, Like New</p>
+        <p><strong>Seller:</strong> JohnDoe123</p>
+        <p><strong>Current Price:</strong> $800</p>
+        <p><strong>Ends:</strong> 2025-06-30 10:00 AM</p>
+
+        <button onclick="attemptBid('iPhone 14 Pro', 800, '2025-06-30T10:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('iPhone 14 Pro', 800)">Add to Cart</button>
+        
+
+    </div>
+    <div class="item">
+        <img src="images/ps5.jpg" alt="PlayStation 5" class="item-img">
+        <h3>PlayStation 5</h3>
+        <p>Latest Gaming Console</p>
+        <p><strong>Seller:</strong> SellerX</p>
+        <p><strong>Current Price:</strong> $500</p>
+        <p><strong>Ends:</strong> 2025-07-01 5:00 PM</p>
+        <button onclick="attemptBid('PlayStation 5', 500, '2025-07-01T17:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('PlayStation 5', 500)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="images/headphones.jpg" alt="Noise Cancelling Headphones" class="item-img">
+        <h3>Noise Cancelling Headphones</h3>
+        <p>Over-ear, Wireless</p>
+        <p><strong>Seller:</strong> SoundWorld</p>
+        <p><strong>Current Price:</strong> $299</p>
+        <p><strong>Ends:</strong> 2025-07-08 3:00 PM</p>
+        <button onclick="attemptBid('Noise Cancelling Headphones', 299, '2025-07-08T15:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('Noise Cancelling Headphones', 299)">Add to Cart</button>
+    </div>
+    </section>
+    
+    <!-- Fashion Section -->
+    <section id="fashion">
+    <h2>Fashion</h2>
+    <div class="item">
+        <img src="images/gucci.jpg" alt="Gucci Handbag" class="item-img">
+        <h3>Gucci Handbag</h3>
+        <p>Authentic Leather</p>
+        <p><strong>Seller:</strong> FashionGuru</p>
+        <p><strong>Current Price:</strong> $950</p>
+        <p><strong>Ends:</strong> 2025-06-29 3:00 PM</p>
+        <button onclick="attemptBid('Gucci Handbag', 950, '2025-06-29T15:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('Gucci Handbag', 950)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="images/watch.jpg" alt="Designer Watch" class="item-img">
+        <h3>Designer Watch</h3>
+        <p>Luxury Wristwatch</p>
+        <p><strong>Seller:</strong> TimeZone</p>
+        <p><strong>Current Price:</strong> $350</p>
+        <p><strong>Ends:</strong> 2025-07-03 6:00 PM</p>
+        <button onclick="attemptBid('Designer Watch', 350, '2025-07-03T18:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('Designer Watch', 350)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="images/sneakers.jpg" alt="Designer Sneakers" class="item-img">
+        <h3>Designer Sneakers</h3>
+        <p>Comfort & Style</p>
+        <p><strong>Seller:</strong> ShoeStop</p>
+        <p><strong>Current Price:</strong> $180</p>
+        <p><strong>Ends:</strong> 2025-07-08 2:00 PM</p>
+        <button onclick="attemptBid('Designer Sneakers', 180, '2025-07-08T14:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('Designer Sneakers', 180)">Add to Cart</button>
+    </div>
+    </section>
+    
+    <!-- Automobiles Section -->
+    <section id="automobiles">
+    <h2>Automobiles</h2>
+    <div class="item">
+        <img src="images/tesla.jpg" alt="Tesla Model 3" class="item-img">
+        <h3>Tesla Model 3</h3>
+        <p>2023 Electric Car</p>
+        <p><strong>Seller:</strong> AutoWorld</p>
+        <p><strong>Current Price:</strong> $25,000</p>
+        <p><strong>Ends:</strong> 2025-07-02 6:00 PM</p>
+        <button onclick="attemptBid('Tesla Model 3', 25000, '2025-07-02T18:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('Tesla Model 3', 25000)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="images/scooter.jpg" alt="Electric Scooter" class="item-img">
+        <h3>Electric Scooter</h3>
+        <p>Eco-friendly, Foldable</p>
+        <p><strong>Seller:</strong> RideZone</p>
+        <p><strong>Current Price:</strong> $650</p>
+        <p><strong>Ends:</strong> 2025-07-09 11:00 AM</p>
+        <button onclick="attemptBid('Electric Scooter', 650, '2025-07-09T11:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('Electric Scooter', 650)">Add to Cart</button>
+    </div>
+    </section>
+    
+    <!-- Home & Kitchen Section -->
+    <section id="home">
+    <h2>Home & Kitchen</h2>
+    <div class="item">
+        <img src="images/fridge.jpg" alt="Refrigerator" class="item-img">
+        <h3>Double Door Refrigerator</h3>
+        <p>Energy Efficient</p>
+        <p><strong>Seller:</strong> HomeStore</p>
+        <p><strong>Current Price:</strong> $1800</p>
+        <p><strong>Ends:</strong> 2025-07-05 11:00 AM</p>
+        <button onclick="attemptBid('Double Door Refrigerator', 1800, '2025-07-05T11:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('Double Door Refrigerator', 1800)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="images/blender.jpg" alt="Blender" class="item-img">
+        <h3>Kitchen Blender</h3>
+        <p>Multi-function, 1200W</p>
+        <p><strong>Seller:</strong> KitchenWorld</p>
+        <p><strong>Current Price:</strong> $99</p>
+        <p><strong>Ends:</strong> 2025-07-09 4:00 PM</p>
+        <button onclick="attemptBid('Kitchen Blender', 99, '2025-07-09T16:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('Kitchen Blender', 99)">Add to Cart</button>
+    </div>
+    </section>
+    
+    <!-- Books Section -->
+    <section id="books">
+    <h2>Books</h2>
+    <div class="item">
+        <img src="images/books.jpg" alt="Book Set" class="item-img">
+        <h3>Classic Books Collection</h3>
+        <p>10 Book Set</p>
+        <p><strong>Seller:</strong> BookHub</p>
+        <p><strong>Current Price:</strong> $150</p>
+        <p><strong>Ends:</strong> 2025-07-04 2:00 PM</p>
+        <button onclick="attemptBid('Classic Books Collection', 150, '2025-07-04T14:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('Classic Books Collection', 150)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="images/cookbook.jpg" alt="Cookbook" class="item-img">
+        <h3>Gourmet Cookbook</h3>
+        <p>100+ Delicious Recipes</p>
+        <p><strong>Seller:</strong> FoodieReads</p>
+        <p><strong>Current Price:</strong> $45</p>
+        <p><strong>Ends:</strong> 2025-07-09 1:00 PM</p>
+        <button onclick="attemptBid('Gourmet Cookbook', 45, '2025-07-09T13:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('Gourmet Cookbook', 45)">Add to Cart</button>
+    </div>
+</section>
+<!-- Sports & Outdoors Section -->
+<section id="sports">
+    <h2>Sports & Outdoors</h2>
+    <div class="item">
+        <img src="images/football.jpg" alt="Football" class="item-img">
+        <h3>Professional Football</h3>
+        <p>FIFA Approved</p>
+        <p><strong>Seller:</strong> SportsWorld</p>
+        <p><strong>Current Price:</strong> $60</p>
+        <p><strong>Ends:</strong> 2025-07-12 4:00 PM</p>
+        <button onclick="attemptBid('Professional Football', 60, '2025-07-12T16:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('Professional Football', 60)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="images/treadmill.jpg" alt="Treadmill" class="item-img">
+        <h3>Foldable Treadmill</h3>
+        <p>Indoor Fitness</p>
+        <p><strong>Seller:</strong> FitZone</p>
+        <p><strong>Current Price:</strong> $750</p>
+        <p><strong>Ends:</strong> 2025-07-14 10:00 AM</p>
+        <button onclick="attemptBid('Foldable Treadmill', 750, '2025-07-14T10:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('Foldable Treadmill', 750)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="images/camping.jpg" alt="Camping Tent" class="item-img">
+        <h3>4-Person Camping Tent</h3>
+        <p>Waterproof, Easy Setup</p>
+        <p><strong>Seller:</strong> OutdoorLife</p>
+        <p><strong>Current Price:</strong> $130</p>
+        <p><strong>Ends:</strong> 2025-07-11 6:00 PM</p>
+        <button onclick="attemptBid('4-Person Camping Tent', 130, '2025-07-11T18:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('4-Person Camping Tent', 130)">Add to Cart</button>
+    </div>
+    </section>
+    
+    <!-- Health & Beauty Section -->
+    <section id="health">
+    <h2>Health & Beauty</h2>
+    <div class="item">
+        <img src="images/perfume.jpg" alt="Perfume" class="item-img">
+        <h3>Luxury Perfume</h3>
+        <p>50ml, Long Lasting</p>
+        <p><strong>Seller:</strong> BeautyHub</p>
+        <p><strong>Current Price:</strong> $95</p>
+        <p><strong>Ends:</strong> 2025-07-13 2:00 PM</p>
+        <button onclick="attemptBid('Luxury Perfume', 95, '2025-07-13T14:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('Luxury Perfume', 95)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="images/hairdryer.jpg" alt="Hair Dryer" class="item-img">
+        <h3>Professional Hair Dryer</h3>
+        <p>2200W, Ionic Technology</p>
+        <p><strong>Seller:</strong> GlamStore</p>
+        <p><strong>Current Price:</strong> $75</p>
+        <p><strong>Ends:</strong> 2025-07-15 1:00 PM</p>
+        <button onclick="attemptBid('Professional Hair Dryer', 75, '2025-07-15T13:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('Professional Hair Dryer', 75)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="images/massager.jpg" alt="Massage Gun" class="item-img">
+        <h3>Deep Tissue Massage Gun</h3>
+        <p>Rechargeable, Quiet</p>
+        <p><strong>Seller:</strong> RelaxPro</p>
+        <p><strong>Current Price:</strong> $120</p>
+        <p><strong>Ends:</strong> 2025-07-16 3:00 PM</p>
+        <button onclick="attemptBid('Deep Tissue Massage Gun', 120, '2025-07-16T15:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('Deep Tissue Massage Gun', 120)">Add to Cart</button>
+    </div>
+    </section>
+    
+    <!-- Toys & Games Section -->
+    <section id="toys">
+    <h2>Toys & Games</h2>
+    <div class="item">
+        <img src="images/lego.jpg" alt="LEGO Set" class="item-img">
+        <h3>LEGO Creator Set</h3>
+        <p>1000+ Pieces</p>
+        <p><strong>Seller:</strong> ToyWorld</p>
+        <p><strong>Current Price:</strong> $89</p>
+        <p><strong>Ends:</strong> 2025-07-12 5:00 PM</p>
+        <button onclick="attemptBid('LEGO Creator Set', 89, '2025-07-12T17:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('LEGO Creator Set', 89)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="images/dollhouse.jpg" alt="Dollhouse" class="item-img">
+        <h3>Wooden Dollhouse</h3>
+        <p>3 Floors, Furnished</p>
+        <p><strong>Seller:</strong> KidsStore</p>
+        <p><strong>Current Price:</strong> $160</p>
+        <p><strong>Ends:</strong> 2025-07-14 11:00 AM</p>
+        <button onclick="attemptBid('Wooden Dollhouse', 160, '2025-07-14T11:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('Wooden Dollhouse', 160)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="images/remote.jpg" alt="Remote Control Car" class="item-img">
+        <h3>Remote Control Car</h3>
+        <p>4x4 Off-Road</p>
+        <p><strong>Seller:</strong> RCZone</p>
+        <p><strong>Current Price:</strong> $70</p>
+        <p><strong>Ends:</strong> 2025-07-15 4:00 PM</p>
+        <button onclick="attemptBid('Remote Control Car', 70, '2025-07-15T16:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('Remote Control Car', 70)">Add to Cart</button>
+    </div>
+    </section>
+    <!-- Music & Instruments Section -->
+<section id="music">
+    <h2>Music & Instruments</h2>
+    <div class="item">
+        <img src="images/guitar.jpg" alt="Acoustic Guitar" class="item-img">
+        <h3>Acoustic Guitar</h3>
+        <p>Classic Wooden</p>
+        <p><strong>Seller:</strong> MusicStore</p>
+        <p><strong>Current Price:</strong> $250</p>
+        <p><strong>Ends:</strong> 2025-07-20 3:00 PM</p>
+        <button onclick="attemptBid('Acoustic Guitar', 250, '2025-07-20T15:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('Acoustic Guitar', 250)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="images/keyboard.jpg" alt="Electric Keyboard" class="item-img">
+        <h3>Electric Keyboard</h3>
+        <p>88 Keys, Digital</p>
+        <p><strong>Seller:</strong> SoundPro</p>
+        <p><strong>Current Price:</strong> $450</p>
+        <p><strong>Ends:</strong> 2025-07-22 5:00 PM</p>
+        <button onclick="attemptBid('Electric Keyboard', 450, '2025-07-22T17:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('Electric Keyboard', 450)">Add to Cart</button>
+    </div>
+    </section>
+    
+    <!-- Collectibles & Art Section -->
+    <section id="collectibles">
+    <h2>Collectibles & Art</h2>
+    <div class="item">
+        <img src="images/painting.jpg" alt="Vintage Painting" class="item-img">
+        <h3>Vintage Painting</h3>
+        <p>Signed, Framed</p>
+        <p><strong>Seller:</strong> ArtWorld</p>
+        <p><strong>Current Price:</strong> $1200</p>
+        <p><strong>Ends:</strong> 2025-07-25 1:00 PM</p>
+        <button onclick="attemptBid('Vintage Painting', 1200, '2025-07-25T13:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('Vintage Painting', 1200)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="images/coin.jpg" alt="Antique Coin" class="item-img">
+        <h3>Antique Coin</h3>
+        <p>Rare, 19th Century</p>
+        <p><strong>Seller:</strong> CollectorZone</p>
+        <p><strong>Current Price:</strong> $650</p>
+        <p><strong>Ends:</strong> 2025-07-26 4:00 PM</p>
+        <button onclick="attemptBid('Antique Coin', 650, '2025-07-26T16:00:00')">Place Bid</button>
+        <button onclick="attemptAddToCart('Antique Coin', 650)">Add to Cart</button>
+    
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2025 TreasureHunt Auction System | <a href="Contact.html">Contact</a> | <a href="Help.html">Help</a></p>
+
+</footer>
+<script>
+    
+    // Category Filter 
+    function filterCategory(categoryId) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            if (categoryId === 'all' || section.id === categoryId) {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        });
+    }
+    
+    // Initialize Cart
+    let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+    
+    // Add to Cart 
+    function addToCart(itemName, price) {
+        cart.push({ name: itemName, price: price });
+        localStorage.setItem("cartItems", JSON.stringify(cart));
+        alert(itemName + " added to cart!");
+        updateCartCount();
+    }
+    
+    // Update Cart Count Display
+    function updateCartCount() {
+        const countElement = document.getElementById("cart-count");
+        if (countElement) {
+            countElement.innerText = cart.length;
+        }
+    }
+    
+    // Place Bid Function
+    function placeBid(itemName, currentPrice, endTimeStr) {
+        const now = new Date();
+        const endTime = new Date(endTimeStr);
+    
+        if (now > endTime) {
+            alert(`Bidding for ${itemName} has ended.`);
+            return;
+        }
+    
+        const bid = prompt(`Enter your bid amount for ${itemName} (Current: $${currentPrice}):`);
+        if (bid && parseFloat(bid) > currentPrice) {
+            alert(`Your bid of $${bid} for ${itemName} has been placed.`);
+        } else if (bid) {
+            alert(`Your bid must be higher than $${currentPrice}.`);
+        }
+    }
+    
+    // Add to Cart with Login Check
+    function attemptAddToCart(itemName, price) {
+        if (localStorage.getItem("isLoggedIn") === "true") {
+            addToCart(itemName, price);
+        } else {
+            alert("To buy or sell, You need to register. It takes 5 minutes to do it and then you can conveniently buy/Sell. Have Fun.");
+            window.location.href = "Register.html";
+        }
+    }
+    
+    //  Place Bid for Login Check
+    function attemptBid(itemName, currentPrice, endTimeStr) {
+        if (localStorage.getItem("isLoggedIn") === "true") {
+            placeBid(itemName, currentPrice, endTimeStr);
+        } else {
+            alert("To buy or sell, You need to register. It takes 5 minutes to do it and then you can conveniently buy/Sell. Have Fun.");
+            window.location.href = "Register.html";
+        }
+    }
+    
+    //  Top Button Logic
+    const scrollBtn = document.getElementById("scroll-top");
+    window.onscroll = function() {
+        scrollBtn.style.display = (document.documentElement.scrollTop > 100) ? "block" : "none";
+    };
+    scrollBtn.onclick = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    
+    
+    const darkToggle = document.getElementById("dark-toggle");
+    darkToggle.onclick = function() {
+        document.body.classList.toggle("dark-mode");
+        darkToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    };
+    
+    // Login Check for Redirect Buttons
+    function checkLogin(destination) {
+        if (localStorage.getItem("isLoggedIn") === "true") {
+            window.location.href = destination;
+        } else {
+            alert("To buy or sell, You need to register. It takes 5 minutes to do it and then you can conveniently buy/Sell. Have Fun.");
+            window.location.href = "Register.html";
+        }
+    }
+    
+    // Login Button Logic only if this page has login-btn
+    const loginButton = document.getElementById("login-btn");
+    if (loginButton) {
+        loginButton.onclick = function() {
+            localStorage.setItem("isLoggedIn", "true");  
+            alert("Login successful!");
+            window.location.href = "ViewItem.html"; 
+        };
+    }
+    
+    // Update Cart Count 
+    updateCartCount();
+    </script>
+    
