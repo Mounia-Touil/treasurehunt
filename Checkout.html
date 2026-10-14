@@ -13,7 +13,7 @@
     <div class="header-content">
         <div class="header-left">
             <img src="Logo.png" alt="Treasure Hunt Logo" class="logo">
-            <h1>TreasureHunt Auction System</h1>
+            <h1>TreasureHunt </h1>
         </div>
         <div id="cart-icon">
             <a href="Cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
@@ -36,8 +36,8 @@
     </nav>
 </header>
 
-<button id="scroll-top">⬆️</button>
-<button id="dark-toggle">🌙</button>
+<button id="scroll-top"></button>
+<button id="dark-toggle"></button>
 
 <div class="sidebar">
     <h3>Categories</h3>
@@ -66,7 +66,7 @@
 </div>
 
 <footer>
-    <p>&copy; 2025 TreasureHunt Auction System | <a href="Contact.html">Contact</a> | <a href="Help.html">Help</a></p>
+    <p>&copy; 2025 TreasureHunt  | <a href="Contact.html">Contact</a> | <a href="Help.html">Help</a></p>
 </footer>
 
 <script>
@@ -84,7 +84,7 @@ scrollBtn.onclick = function() {
 
 document.getElementById("dark-toggle").onclick = function() {
     document.body.classList.toggle("dark-mode");
-    this.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    this.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "";
 };
 function checkLogin(destination) {
     if (localStorage.getItem("isLoggedIn") === "true") {

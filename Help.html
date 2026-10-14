@@ -33,61 +33,53 @@
     <div class="header-content">
         <div class="header-left">
             <img src="Logo.png" alt="Treasure Hunt Logo" class="logo">
-            <h1>TreasureHunt Auction System</h1>
-        </div>
-        <div id="cart-icon">
-            <a href="Cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
+            <h1>TreasureHunt </h1>
         </div>
     </div>
     <nav>
         <ul>
-            <li><a href="TresureHunt.html" class="nav-button">Home</a></li>
-            <li><a href="Register.html" class="nav-button">Register</a></li>
-            <li><a href="login.html" class="nav-button">Login</a></li>
-            <li><a href="ViewItem.html" class="nav-button">View Items</a></li>
-            <li><a href="Sell.html" class="nav-button">Sell Item</a></li>
-            <li><a href="Admin.html" class="nav-button">Admin Login</a></li>
+            <li><a href="TreasureHunt.php" class="nav-button">Home</a></li>
+            <li><a href="ViewItem.php" class="nav-button">View Items</a></li>
+            <li><a href="SellItem.php" class="nav-button">Sell Item</a></li>
+            <li><a href="AdminLogin.html" class="nav-button">Admin Login</a></li>
             <li><a href="Help.html" class="nav-button active">Help</a></li>
             <li><a href="Contact.html" class="nav-button">Contact</a></li>
-            <li><a href="#" onclick="checkLogin('Sell.html')">Sell Item</a></li>
-            <li><a href="#" onclick="checkLogin('Cart.html')">Cart</a></li>
-
         </ul>
     </nav>
 </header>
 
-<button id="scroll-top">⬆️</button>
-<button id="dark-toggle">🌙</button>
+<button id="scroll-top"></button>
+<button id="dark-toggle"></button>
 
 <div class="sidebar">
-    <h3>Categories</h3>
+    <h3> Categories</h3>
     <ul>
-        <li><a href="ViewItem.html#electronics">Electronics</a></li>
-        <li><a href="ViewItem.html#fashion">Fashion</a></li>
-        <li><a href="ViewItem.html#automobiles">Automobiles</a></li>
-        <li><a href="ViewItem.html#home">Home & Kitchen</a></li>
-        <li><a href="ViewItem.html#books">Books</a></li>
-        <li><a href="ViewItem.html#sports">Sports & Outdoors</a></li>
-        <li><a href="ViewItem.html#health">Health & Beauty</a></li>
-        <li><a href="ViewItem.html#toys">Toys & Games</a></li>
-        <li><a href="ViewItem.html#music">Music & Instruments</a></li>
-        <li><a href="ViewItem.html#collectibles">Collectibles & Art</a></li>
+        <li><a href="ViewItem.php#electronics"> Electronics</a></li>
+        <li><a href="ViewItem.php#fashion"> Fashion</a></li>
+        <li><a href="ViewItem.php#automobiles"> Automobiles</a></li>
+        <li><a href="ViewItem.php#home"> Home & Kitchen</a></li>
+        <li><a href="ViewItem.php#books"> Books</a></li>
+        <li><a href="ViewItem.php#sports"> Sports & Outdoors</a></li>
+        <li><a href="ViewItem.php#health"> Health & Beauty</a></li>
+        <li><a href="ViewItem.php#toys"> Toys & Games</a></li>
+        <li><a href="ViewItem.php#music"> Music & Instruments</a></li>
+        <li><a href="ViewItem.php#collectibles"> Collectibles & Art</a></li>
     </ul>
-    </div>
-    
+</div>
+
 <div class="main-content">
     <section>
         <h2>Help & Frequently Asked Questions</h2>
 
         <div class="faq-item">
-            <h4>💡 How do I place a bid?</h4>
+            <h4>How do I place a bid?</h4>
             <div class="faq-content">
                 <p>Visit the View Items page, choose an item, click "Place Bid" and enter your bid amount.</p>
             </div>
         </div>
 
         <div class="faq-item">
-            <h4>👜 How do I sell an item?</h4>
+            <h4> How do I sell an item?</h4>
             <div class="faq-content">
                 <p>Go to the Sell Item page, fill out your item details, and list it for auction.</p>
             </div>
@@ -101,7 +93,7 @@
         </div>
 
         <div class="faq-item">
-            <h4>📧 How can I contact customer support?</h4>
+            <h4> How can I contact customer support?</h4>
             <div class="faq-content">
                 <p>Visit the Contact page to send us a message. Our support team will respond shortly.</p>
             </div>
@@ -110,11 +102,14 @@
 </div>
 
 <footer>
-    <p>&copy; 2025 TreasureHunt Auction System | <a href="Contact.html">Contact</a> | <a href="Help.html">Help</a></p>
+    <p>&copy; 2025 TreasureHunt  | <a href="Contact.html">Contact</a> | <a href="Help.html">Help</a></p>
 </footer>
 
 <script>
-document.getElementById("cart-count").innerText = localStorage.getItem("cartCount") || 0;
+const cartCount = document.getElementById("cart-count");
+if (cartCount) {
+    cartCount.innerText = localStorage.getItem("cartCount") || 0;
+}
 
 const scrollBtn = document.getElementById("scroll-top");
 window.onscroll = function() {
@@ -131,7 +126,8 @@ document.getElementById("dark-toggle").onclick = function() {
 
 document.querySelectorAll(".faq-item h4").forEach(h => {
     h.addEventListener("click", () => {
-        h.nextElementSibling.style.display = h.nextElementSibling.style.display === "block" ? "none" : "block";
+        const content = h.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
     });
 });
 </script>

@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Secrets and environment files
+.env
+*.pem
+*.key
+
+# Build and tool folders
+*.class
+__pycache__/
+.venv/
+node_modules/
